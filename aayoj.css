@@ -1,0 +1,545 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:  #f4f4f4;
+}
+
+.navbar{
+    float: right;
+    margin-right: 8%;
+}
+.navbar li {
+    margin: 5% 6%;
+}
+.navbar button{
+  border-style: none;
+}
+.navbar a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    transform: scale(1.2);
+}
+.container {
+    width: 80%;
+    margin: auto auto;
+}
+header {
+    background-color: #f7f5f5;
+    color: rgb(0, 0, 0);
+    padding: 0.6%;
+    margin: 0;
+}
+header h1 {
+    display: inline-block;
+    font-family: "Caveat", cursive;
+    font-style: bold;
+    font-size: 350%;
+}
+nav ul {
+    list-style: none;
+    float: right;
+    color: white;
+    text-decoration: none;
+    display: inline;
+    margin: 0 1em;
+    display: flex;
+    justify-content: space-around;
+}
+/*more*/
+#overlay {
+  position: fixed;
+  width: 50%;
+  left:0; top:0; bottom:0; right:0;
+  background: #201e1e;
+  z-index: 101;
+  opacity: 0;
+  visibility: hidden;
+}
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+#overlay button{
+  float: right;
+  margin: 2%;margin-right: 3%;
+  width: 2em;
+  border-style: none;
+}
+
+.container-overlay {
+  margin: 2em 5em 2em 5em;
+  width: auto;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+.profile {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile h2 a{
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.profile p a{
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+}
+
+.menu {
+  padding: 10px;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #333;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.menu ul li img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.menu ul li:hover {
+  background-color: #e9e9e9;
+}
+
+.menu ul li.active {
+  background-color: #e9e9e9;
+  font-weight: bold;
+  color: #000;
+}
+
+
+
+
+
+.home {
+    background-color: #f4f4f4;
+}
+
+.bcimg1{
+    width: 50%;
+    height: 36rem;
+    align-items: left;
+    z-index: -1;
+    margin-bottom: 5%;
+}
+.bcimg2{
+    position: relative;
+    left: -13%;
+    width: 30%;
+    height: 20rem;
+    z-index: 100;
+}
+#home h2{
+    font-family: "Caveat", cursive;
+    font-size: 290%;
+    position: absolute;
+    top: 55%;right: 15%;
+}
+#home p{
+    font-family: "Caveat", cursive;
+    font-size: 200%;
+    position: absolute;
+    top: 66%;right: 5%;
+}
+
+#planner{
+    height: 44rem;
+    background-color: #201e1e;
+}
+#events{
+    position: absolute;
+    top: 200%;
+    left: 10%;
+}
+#planner h1{
+  color: #f4f4f4;
+  font-family: "Caveat", cursive;
+  position: absolute;
+  top: -20%;
+  left: -45%;
+  font-size: 50px;
+}
+
+.container2{
+  position: absolute;
+  top: 155%;
+  left: 58%;
+}
+.container2 img{
+  height: 33rem;
+  width: 28rem;
+}
+
+.wrapper .outer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .wrapper .card{
+    background: #f4f4f4;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    justify-content: space-between;
+    position: absolute;
+    border-radius: 80px 80px 80px 80px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    animation: animate 15s linear infinite;
+    animation-delay: calc(3s * var(--delay));
+  }
+  .outer:hover .card{
+    animation-play-state: paused;
+  }
+  .wrapper .card:last-child{
+    animation-delay: calc(-3s * var(--delay));
+  }
+  @keyframes animate {
+    0%{
+      opacity: 0;
+      transform: translateY(100%) scale(0.5);
+    }
+    5%, 20%{
+      opacity: 0.4;
+      transform: translateY(100%) scale(0.7);
+    }
+    25%, 40%{
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0%) scale(1);
+    }
+    45%, 60%{
+      opacity: 0.4;
+      transform: translateY(-100%) scale(0.7);
+    }
+    65%, 100%{
+      opacity: 0;
+      transform: translateY(-100%) scale(0.5);
+    }
+  }
+  .card .content{
+    display: flex;
+    align-items: center;
+  }
+
+  .card .details{
+    margin: 1%;
+  }
+  .details span{
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .card a{
+    text-decoration: none;
+    padding: 7px 18px;
+    border-radius: 25px;
+    color: #f4f4f4;
+    background: #000;
+    transition: all 0.3s ease;
+  }
+  .card a:hover{
+    transform: scale(0.94);
+  }
+
+
+
+.vendors{
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: #f4f4f4;
+}
+.container h2{
+  font-family: "Caveat", cursive;
+  font-style: bold;
+  font-size: 50px;
+}
+
+#vendors .vendor{
+  background: #f4f4f4;
+  margin: 2%;
+  text-align: center;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  pointer-events: none;
+  justify-content: space-between;
+  border-radius: 80px 80px 80px 80px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.carousel-inner{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.carousel-inner a{
+    text-decoration: none;
+    padding: 7px 18px;
+    border-radius: 25px;
+    color: #f4f4f4;
+    background: #000;
+    transition: all 0.3s ease;
+}
+
+#vendors {
+  text-align: center;
+  
+}
+
+/*destination wedding*/
+
+.destination-wedding {
+  padding: 2%;
+  background-color: #201e1e;
+  text-align: center;
+  font-family: "Caveat", cursive;
+}
+
+.destination-wedding h1 {
+  font-style: bold;
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: #f4f4f4;
+}
+
+.destination-wedding p {
+  font-size: 1.5em;
+  color: #f4f4f4;
+}
+
+.destination-wedding a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.destination-wedding .destination-cards {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.destination-wedding .card {
+  width: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px  #f4f4f4(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.destination-wedding .card:hover {
+  transform: translateY(-10px);
+}
+
+.destination-wedding .card img {
+  width: 100%;
+  height: 10em;
+}
+
+.destination-wedding .card p {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color:  #201e1e;
+}
+
+.discover-btn {
+  padding: 10px 20px;
+  margin: 1.5%;
+  background-color: #f4f4f4;
+  color: #201e1e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-style: bold;
+}
+
+.discover-btn:hover {
+  background-color: #dad9d9;
+}
+
+/*contact us*/
+#contact{
+  background-color: #f4f4f4;
+  padding-top: 5%;padding-bottom: 5%  ;
+  text-align: center;
+}
+.contact h2,.contact label{
+  color: #201e1e;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form label {
+    margin-top: 1em;
+}
+.contact form input{
+  border-radius: 25px;
+}
+.contact form input, .contact form textarea {
+    width: 80%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
+
+.contact form button {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #c0bebe;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+
+.user-rating{
+   background-color: #201e1e;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+.ratings{
+  color: #f4f4f4;
+  padding: 2.5%;
+  margin-left: 10%;margin-right: 10%;
+}
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  float: left;
+  width: 70%;
+  margin-top: 10px;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 20%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 1%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  /* Hide the right column on small screens */
+  .right {
+    display: none;
+  }
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul {
+        float: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .event {
+        width: 80%;
+        margin: 0.5em auto;
+    }
+
+    .contact form input, .contact form textarea {
+        width: 100%;
+    }
+}
+

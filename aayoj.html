@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAYOJ - Event Planning Website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="C:\Users\HP PC\.vscode\AAYOJ\aayoj.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AAYOJ</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#planner">Planner</a></li>
+                    <li><a href="#vendors">Vendors</a></li>
+                    <li><a href="#ideas">Ideas</a></li>
+                    <li><button onclick="toggleOverlay()">More</button>
+                      <a href="#more"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="overlay">
+      <button onclick="toggleOverlay()">X</button>
+        <div class="container-overlay">
+          <div class="profile">
+              <h2><a href="#Vendor-login">Are you a Vendor?</a></h2>
+              <p><a href="#Login">Login</a></p>
+              <p><a href="#Signup">Signup</a></p>
+          </div>
+          <div class="menu">
+              <ul>
+                  <li class="active"><img src="planner-icon.png" alt=""> My planner</li>
+                  <li><img src="checklist-icon.png" alt=""> Checklist</li>
+                  <li><img src="guests-icon.png" alt=""> Guests</li>
+                  <li><img src="vendor-icon.png" alt=""> Vendor manager</li>
+                  <li><img src="budget-icon.png" alt=""> Budget</li>
+                  <li><img src="favorites-icon.png" alt=""> Favorites</li>
+                  <li><img src="photos-icon.png" alt=""> Photos</li>
+                  <li><img src="events-icon.png" alt=""> Events</li>
+              </ul>
+          </div>
+       </div>
+
+   </div>
+    <section id="home" class="home">
+        
+        <div class="container">
+            <img class="bcimg1" src="C:\Users\HP PC\OneDrive\Pictures\Screenshots\Screenshot 2024-07-02 234434.png" alt="">
+            <img class="bcimg2" src="C:\Users\HP PC\OneDrive\Pictures\Screenshots\Screenshot 2024-07-02 232712.png" alt="">
+            <h2>AAYOJ</h2>
+            <p>Har event apne andaaz me! </p>
+        </div>
+    </section>
+
+    <div>
+        <section id="planner" class="planner">
+            <div class="container2">
+              <h1>Plan your event</h1>
+                <img src="C:\Users\HP PC\OneDrive\Pictures\Screenshots\Screenshot 2024-07-02 215929.png" alt="">
+              </div>
+        </section>
+
+    </div>
+    <section id="events">  
+        <div class="preview">
+            <div class="wrapper">
+                <div class="outer">  
+                  <div class="card" style="--delay:-1;">
+                    <div class="content">
+                      <div class="details">
+                        <span class="name">Birthday Planning</span>
+                        <p>Celebrate your special day with a memorable party!</p>
+                      </div>
+                    </div>
+                    <a href="#">Book</a>
+                  </div>
+                  <div class="card" style="--delay:0;">
+                    <div class="content">
+                      <div class="details">
+                        <span class="name">Wedding Planning</span>
+                        <p>Make your dream wedding come true with our expert planners!</p>
+                      </div>
+                    </div>
+                    <a href="#">Book</a>
+                  </div>
+                  <div class="card" style="--delay:1;">
+                    <div class="content">
+                      <div class="details">
+                        <span class="name">Concert Planning</span>
+                       <p>Host an unforgettable concert with our professional team!</p>
+                     </div>
+                   </div>
+                   <a href="#">Book</a>
+                 </div>
+                 <div class="card" style="--delay:2;">
+                   <div class="content">
+                     <div class="details">
+                       <span class="name">Office Parties</span>
+                       <p>Organise a professional yet enjoyable function with us!</p>
+                     </div>
+                   </div>
+                   <a href="#">Book</a>
+                 </div>
+                 <div class="card" style="--delay:2;">
+                   <div class="content">
+                     <div class="details">
+                       <span class="name">Minimony</span>
+                       <p>Plan an unforgettable minimony with us!</p>
+                     </div>
+                   </div>
+                   <a href="#">Book</a>
+               </div>
+            </div>
+           </div>
+        </div>         
+    </section>
+    
+
+    <section id="vendors" class="vendors">
+        <div class="container">
+            <h2>Connect with Vendors</h2>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="vendor">
+                        <h4>Caterers</h4>
+                        <p>Find the best catering services for your event.</p>
+                        <a href="#">Book</a>
+                      </div>
+                    <div class="vendor">
+                        <h4>Jewelers</h4>
+                        <p>Discover exquisite jewelry for your special occasions.</p>
+                        <a href="#">Book</a>
+                      </div>
+                    <div class="vendor">
+                        <h4>Flowers</h4>
+                        <p>Choose beautiful floral arrangements to enhance your event.</p>
+                        <a href="#">Book</a>
+                      </div>
+                    <div class="vendor">
+                        <h4>Photographers</h4>
+                        <p>Capture every moment with professional photography.</p>
+                        <a href="#">Book</a>
+                      </div>
+                    <div class="vendor">
+                        <h4>Venues</h4>
+                        <p>Find the perfect venue for your event.</p>
+                        <a href="#">Book</a>
+                      </div>
+                    <div class="vendor">
+                        <h4>Makeup Artists</h4>
+                        <p>Get the best makeup services for your special day.</p>
+                        <a href="#">Book</a>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destination-wedding">
+      <h1>Plan your destination wedding</h1>
+      <p>No matter where in the world you want to get married, Aayoj's directory of international wedding professionals can help you celebrate.</p>
+      <p>*Local laws may restrict service availability to all. See the <a href="#">Equality Index</a> for more information.</p>
+      <div class="destination-cards">
+        <div>
+          <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2017/01/08/19/30/rio-de-janeiro-1963744_640.jpg" alt="Brazil">
+          </div>
+          <p>Brazil</p>
+        </div>
+        <div>
+          <div class="card">
+            <img src="https://burst.shopifycdn.com/photos/eifel-tower-france.jpg?width=1000&format=pjpg&exif=0&iptc=0" alt="France">
+          </div>
+          <p>France</p>
+        </div>  
+        <div>
+          <div class="card">
+            <img src="https://t4.ftcdn.net/jpg/01/92/21/09/360_F_192210934_0eXirXM38yfxCNwjgxcWfpcodQyvoRZf.jpg" alt="Italy">
+          </div>
+          <p>Italy</p>
+        </div> 
+        <div>
+          <div class="card">
+            <img src="https://media.istockphoto.com/id/956105474/photo/cancun-beach-with-boat.jpg?s=612x612&w=0&k=20&c=1QmFlW1CZGl2Ye94DZBarVHI5C_sQ24SJqj6REpSdKo=" alt="Mexico">
+          </div>
+          <p>Mexico</p>
+        </div>
+        <div>
+          <div class="card">
+            <img src="https://media.istockphoto.com/id/700954448/photo/porto-portugal-skyline.webp?a=1&b=1&s=612x612&w=0&k=20&c=okC0zua0kqGTNljUQT3Gwt74y9dvpTvhosFJUQcZ_hg=" alt="Portugal">
+          </div>
+          <p>Portugal</p>
+        </div>
+        <div>
+          <div class="card">
+            <img src="https://media.istockphoto.com/id/621985748/photo/madrid.jpg?s=612x612&w=0&k=20&c=mUYksvk0JeJBtofAUBHqx3PaTB5aAuo_XY6J9weAEGQ=" alt="Spain">
+          </div>
+          <p>Spain</p>
+        </div>   
+      </div>
+      <button class="discover-btn">Discover all destinations</button>
+  </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+  <div class="user-rating">  
+    <section>
+      <div class="ratings">
+        <span class="heading">User Rating</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <p>4.8 average based on 254 reviews.</p>
+        <hr style="border:3px solid #201e1e">
+      </div>
+    </section>    
+    
+      <div class="ratings">
+        <div class="row">
+          <div class="side">
+            <div>5 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-5"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>150</div>
+          </div>
+          <div class="side">
+            <div>4 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-4"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>43</div>
+          </div>
+          <div class="side">
+            <div>3 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-3"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>15</div>
+          </div>
+          <div class="side">
+            <div>2 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-2"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>6</div>
+          </div>
+          <div class="side">
+            <div>1 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-1"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>2</div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AAYOJ. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="C:\Users\HP PC\.vscode\AAYOJ\aayoj.js"></script>
+</body>
+</html>
